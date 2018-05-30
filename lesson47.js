@@ -11,5 +11,15 @@ $(function(){
         if($(this).hasClass('btn-2')){
             $('h1').load('hello.html .one')
         }
+        
+        if($(this).hasClass('btn-3')){
+            var url = 'hello.html';
+            
+            $('#output1').load(url, function(responseText,status,xhr){
+                console.log(responseText);
+                console.log(status);
+                console.log(xhr)
+            })
+        }
     })
 })
